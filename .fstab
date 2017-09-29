@@ -1,0 +1,25 @@
+# /etc/fstab: static file system information.
+#
+# Use 'blkid' to print the universally unique identifier for a
+# device; this may be used with UUID= as a more robust way to name devices
+# that works even if disks are added and removed. See fstab(5).
+#
+# <file system> <mount point>   <type>  <options>       <dump>  <pass>
+# / was on /dev/sdb3 during installation
+UUID=56a13a64-6828-4576-85a8-718dfc749f4f /               ext4    errors=remount-ro 0       1
+# /boot/efi was on /dev/sda1 during installation
+UUID=CE7C-E34D  /boot/efi       vfat    umask=0077      0       1
+# /home was on /dev/sdb4 during installation
+UUID=c9452571-2fa2-4837-9228-96422f3b2c7d /home           ext4    defaults        0       2
+/dev/mapper/fedora00-swap none            swap    sw              0       0
+
+
+# /dev/sda3 Label: Videos Mount point: /media/videos
+UUID=5CE09222E0920286  /media/videos  ntfs-3g  auto,users,uid=1000,gid=100,dmask=027,fmask=137,utf8  0  0
+
+# /dev/sda4 Label: Storage Mount Point: /media/storage
+UUID=C23464F43464ECBB  /media/storage  ntfs-3g  auto,users,uid=1000,gid=100,dmask=027,fmask=137,utf8  0  0
+
+# /dev/sda5 Label: Stuff Mount Point: /media/stuff
+UUID=AC2A39702A393922  /media/stuff  ntfs-3g  auto,users,uid=1000,gid=100,dmask=027,fmask=137,utf8  0  0
+
